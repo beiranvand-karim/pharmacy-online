@@ -3,4 +3,5 @@ WORKDIR /app
 COPY . /app
 RUN npm i
 RUN npm run build
-RUN node ./sapper/build/index.js
+EXPOSE 3000
+CMD ["node", "./__sapper__/build/index.js"]
